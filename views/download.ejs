@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temp Share</title>
+    <link rel="icon" type="image/x-icon" href="/./img/logo.png">
+  
+   
+    <link rel="stylesheet" href="/css/new.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"></script>
+</head>
+
+<body>
+   
+    <div class="container mt-4">
+        <header>
+          <div class="d-flex flex-column flex-md-row align-items-center pb- mb-4 border-bottom">
+            <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+              <img src="/./img/logo.png" alt="">
+              <span class="fs-4">Tempshare</span>
+            </a>
+    
+            <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
+              <a class="me-3 py-2 text-dark text-decoration-none" href="#Featuresrrr">Features</a>
+              <a class="me-3 py-2 text-dark text-decoration-none" href="#Supporttt">How To Use</a>
+              <a class="me-3 py-2 text-dark text-decoration-none" href="#FQAAA">FAQs</a>
+              <a class="py-2 text-dark text-decoration-none" href="#Supporttt">Support</a>
+             
+              
+            </nav>
+          </div>
+    
+        </header>
+      </div>
+    
+    <div id="homee">
+        <div class="px-4 py-5 my-5 text-center">
+            <img class="d-block mx-auto mb-4" src="/img/file.png" alt="" width="72" height="57">
+            <% if(locals.error){ %>
+                <h4><%= locals.error %> </h4>
+                <% } else { %>
+                 <h1 class="display-5 fw-bold">file is ready to download</h1>
+                <p class="lead mb-4">Link expires in 24 hours</p>
+                <div class="download__meta">
+                    <h4><%= fileName %></h4>
+                    <small class="lead mb-6"><%= parseInt(fileSize/1000) %> KB</small>
+                </div>
+                <div class="send-btn-container">
+                    
+                    <a href="<%= downloadLink %>" class="btn btn-primary btn btn-primary btn-lg">Download file</a>
+                </div>
+                <% } %>
+           
+           </div>
+    </div>
+
+    <!-- <section class="download">
+        <img class="download__icon" src="/img/download.png" alt="download">
+        <% if(locals.error){ %>
+        <h4><%= locals.error %> </h4>
+        <% } else { %>
+        <h2>file is ready to download</h2>
+        <p>Link expires in 24 hours</p>
+        <div class="download__meta">
+            <h4><%= fileName %></h4>
+            <small><%= parseInt(fileSize/1000) %> KB</small>
+        </div>
+        <div class="send-btn-container">
+            <a href="<%= downloadLink %>">Download file</a>
+        </div>
+        <% } %>
+    </section> -->
+
+    <!-- github fork button -->
+    <div id="Featuresrrr">
+        <div class="containerr">
+          <div class="row">
+            <div class="col text-center ssss">
+              <br><br>
+              <h1>Share files like never before</h1>
+            </div>
+          </div>
+    
+          <div class="row mb-9" style="margin-bottom: 50px;">
+            <div class="col desc-box text-center">
+              <h1><img src="/./img/fileup.png" alt="upload file"></h1>
+              <h2>Upload file</h2>
+              <p>Upload the file you'd like to share. Files are uploaded to our server, no need for your own space.</p>
+            </div>
+            <div class="col desc-box text-center">
+              <h1><img src="/./img/filelink.png" alt="scan qrcode"></h1>
+              <h2>Get File Link
+    
+              </h2>
+              <p>Once you upload your files you will be provided a simple link.</p>
+            </div>
+            <div class="col desc-box text-center">
+              <h1><img src="/./img/fileshare.png" alt="share file"></h1>
+              <h2>Share file</h2>
+              <p>Share the link to anyone. And they can download the file.</p>
+            </div>
+            <div class="col desc-box text-center">
+              <h1><img src="/./img/filedelete.png" alt="no worries"></h1>
+              <h2>No worries</h2>
+              <p>Files are deleted after a day. So you'll never worry where your files go.</p>
+            </div>
+          </div>
+    
+    
+    
+    
+          <div class="row">
+            <div class="col desc-box text-center">
+              <h1><img src="/./img/file-transfer.png" alt="upload file"></h1>
+              <h2>Fast Transfer Rates
+    
+    
+              </h2>
+              <p>We don't cap transfer rates. We have servers distributed globally, and we transfer your files to the server
+                nearest to your location.</p>
+            </div>
+            <div class="col desc-box text-center">
+              <h1><img src="/./img/filead.png" alt="scan qrcode"></h1>
+              <h2>Ad-Free File Upload</h2>
+              <p>When we say you can upload your files for free, we mean completely free. Free of cost, free of ads, free of
+                distractions.
+              </p>
+            </div>
+            <div class="col desc-box text-center">
+              <h1><img src="/./img/fileanonymous.png" alt="share file"></h1>
+              <h2>Anonymous File Upload
+              </h2>
+              <p>We offer a no-account required file sharing service. You don't need to register and create an account, to
+                upload and share files.</p>
+            </div>
+            <div class="col desc-box text-center">
+              <h1><img src="/./img/cross-platform.png" alt="no worries"></h1>
+              <h2 style="margin-bottom: 40px;">On All Platforms
+              </h2>
+              <p>You can upload files to Filemail your way. Use a browser, Windows app, Mac app, iOS app, or our Android
+                app.
+    
+              </p>
+            </div>
+          </div>
+    
+    
+    
+    
+          <div class="row">
+            <div class="col text-center">
+              <br><br>
+              <small>Read our <a href="/data" target="_blank"
+                  rel="noreferrer">Data Policy</a>, <a
+                  href="/data" target="_blank"
+                  rel="noreferrer">Terms and Conditions</a> and <a
+                  href="/data" target="_blank"
+                  rel="noreferrer">Attributions</a></small>
+            </div>
+          </div>
+        </div>
+      </div>
+     <!-- --------------------FQA -->
+
+ <div id="FQAAA">
+    <div class="container content-space-t-1 content-space-t-md-3">
+      <!-- Heading -->
+      <div class="w-lg-50 text-center mx-lg-auto mb-7">
+        <div class="col text-center ssss">
+          <br><br>
+          <h1>Frequently Asked Questions</h1>
+        </div>
+        
+      </div>
+      <!-- End Heading -->
+  
+      <div class="w-md-75 w-lg-65 mx-md-auto">
+        <!-- Card -->
+        <div class="card card-lg">
+          <div class="card-body">
+            <!-- Accordion -->
+            <div class="accordion accordion-flush" id="accordionFAQ">
+              <!-- Accordion Item -->
+              <div class="accordion-item">
+                <div class="accordion-header" id="headingOne">
+                  <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse"  data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    <h3 class="">How long do we host your files?</h3>
+  
+                  </a>
+                </div>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ" style="">
+                  <div class="accordion-body">
+                    We host your files on our cloud storage solution for 1 day. After the 1 day, your files are automatically deleted. If you want to store for longer and choose an expiration date, our paid plans have you covered.
+                  </div>
+                </div>
+              </div>
+              <!-- End Accordion Item -->
+  
+              <!-- Accordion Item -->
+              <div class="accordion-item">
+                <div class="accordion-header" id="headingTwo">
+                  <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <h3 class="">Are there any download limits?</h3>
+                  </a>
+                </div>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ" >
+                  <div class="accordion-body">
+                    No, there are no download limits. Your shared files can be downloaded as many times as you want, by as many people as you want. YouÆll be notified when someone has downloaded the file. The only restriction is, the files are no longer available after 1 day.
+                  </div>
+                </div>
+              </div>
+              <!-- End Accordion Item -->
+  
+              <!-- Accordion Item -->
+              <div class="accordion-item">
+                <div class="accordion-header" id="headingThree">
+                  <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                   
+                    <h3 class=""> How do I share ?</h3>
+                  </a>
+                </div>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ" style="">
+                  <div class="accordion-body">
+                    It is really easy to share your files. After you complete an upload, a download link will be generated. You can share this link with anyone and when they visit this link they will see a download button and get your files easily.
+                  </div>
+                </div>
+              </div>
+              <!-- End Accordion Item -->
+  
+              <!-- Accordion Item -->
+              <div class="accordion-item">
+                <div class="accordion-header" id="headingFour">
+                  <a class="accordion-button collapsed" role="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <h3 class=""> What can I upload ?</h3>
+                  </a>
+                </div>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ" style="">
+                  <div class="accordion-body">
+                    You can upload any file as long as they are legal. We are very strict about laws so any uploaded file that violates any law or our terms of use will be deleted immediately and your account will be closed without any notification.
+                  </div>
+                </div>
+              </div>
+              <!-- End Accordion Item -->
+            </div>
+            <!-- End Accordion -->
+          </div>
+  
+          <div class="card-footer bg-soft-warning text-center">
+            <p class="mb-0">Still have questions?</p>
+            <a class="link" href="./page-contacts.html">Contact our friendly support team <i class="bi-chevron-right small ms-1"></i></a>
+          </div>
+        </div>
+        <!-- End Card -->
+      </div>
+    </div>
+  </div>
+  <!-- --------------------howtouse -->
+
+
+<div id="Supporttt">
+      
+    <div class="containerr" style="    max-width: 1291px;">
+      <div class="row">
+        <div class="col text-center ssss">
+          <br><br>
+          <h1>How To Upload  Files Using Tempshare</h1>
+        </div>
+      </div>
+  
+      
+    <div class="row mb-9" style="margin-bottom: 50px;">
+      <div class="col desc-box text-center">
+        <h1><img src="/./img/file.png" alt="upload file"></h1>
+        <h2> 1. Choose Your File </h2>
+        <p>Browse and select the files you want to upload. Or, you can drag and drop your files. You can even leave a message on the download page.</p>
+      </div>
+      <div class="col desc-box text-center">
+        <h1><img src="/./img/fileup.png" alt="scan qrcode"></h1>
+        <h2> 2. Upload Your Files
+  
+        </h2>
+        <p>Once the files are selected, we’ll start uploading them. With end-to-end encryption and a secure file hosting solution, your files are safe.</p>
+      </div>
+      <div class="col desc-box text-center">
+        <h1><img src="/./img/fileshare.png" alt="share file"></h1>
+        <h2>3. Share The Download Link</h2>
+        <p>After the upload is complete, we host your files in the cloud. You'll get a direct link to your stored files. You can share the link with whoever, wherever.</p>
+      </div>
+    
+    </div>
+  
+  
+  
+  
+        </div>
+  </div>
+
+  
+ <!-- --------------------footer -->
+ <div>
+    <div class="container">
+      <footer class="py-4">
+        <div class="row">
+          <!-- <div class="col-6 col-md-2 mb-3">
+            
+            <div class="col desc-box text-center">
+              <h5><img src="./img/file.png" alt="upload file" ></h5>
+              <h2>Tempshare</h2>
+              <p>Temporary Cloud Storage and Service
+
+              </p>
+            </div> -->
+
+
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>About</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="# " class="nav-link p-0 text-muted">Home</a></li>
+              <li class="nav-item mb-2"><a href="#Featuresrrr" class="nav-link p-0 text-muted">Features</a></li>
+              <li class="nav-item mb-2"><a href="#Pricinggg" class="nav-link p-0 text-muted">Pricing</a></li>
+              <li class="nav-item mb-2"><a href="#Supporttt" class="nav-link p-0 text-muted">How To Use</a></li>
+              <li class="nav-item mb-2"><a href="#FQAAA" class="nav-link p-0 text-muted">FAQs</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Company</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="/data" class="nav-link p-0 text-muted">About us</a></li>
+              <li class="nav-item mb-2"><a href="/data" class="nav-link p-0 text-muted">Privacy Policy</a></li>
+              <li class="nav-item mb-2"><a href="/data" class="nav-link p-0 text-muted">Terms of use</a></li>
+              <li class="nav-item mb-2"><a href="/data" class="nav-link p-0 text-muted">Data Policy</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Subscribe to our newsletter</h5>
+              <p>Monthly digest of what's new and exciting from us.</p>
+              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                <label for="newsletter1" class="visually-hidden">Email address</label>
+                <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                <button class="btn btn-primary" type="button">Subscribe</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p>© 2023 Tempshare. All rights reserved.</p>
+          <ul class="list-unstyled d-flex">
+            <li class="ms-3"><a class="link-dark" href="#" ><img  style="height: 35px;
+              width: 35px;" src="https://img.icons8.com/ios-glyphs/256/facebook-new.png"></img></a></li>
+            <li class="ms-3"><a class="link-dark" href="#"><img style="height: 35px;
+              width: 35px;" src="https://img.icons8.com/ios-glyphs/256/instagram-circle.png"></img></a></li>
+             <li class="ms-3"><a class="link-dark" href="#"><img  style="height: 35px;
+              width: 35px;" src="https://img.icons8.com/ios-glyphs/256/twitter-circled.png"></img></a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  
+    
+</body>
+
+</html>
