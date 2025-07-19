@@ -4,7 +4,7 @@ A temporary file sharing tool is a webapplication that allows users to share fil
 
 ## Web Link
 
-https://temp-share.netlify.app/
+https://temp-file-share.netlify.app/
 
 # Hi, I'm Krish! 👋
 
